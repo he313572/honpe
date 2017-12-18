@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.honpe.mapper.ContentMapper">
+	<resultMap id="BaseResultMap" type="com.honpe.po.Content">
+		<id column="cid" property="cid" jdbcType="INTEGER" />
+		<result column="caid" property="caid" jdbcType="INTEGER" />
+		<result column="contentName" property="contentname" jdbcType="VARCHAR" />
+		<result column="contentTitle" property="contenttitle" jdbcType="VARCHAR" />
+		<result column="createTime" property="createtime" jdbcType="DATE" />
+		<result column="updateTime" property="updatetime" jdbcType="DATE" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs" type="com.honpe.po.Content" extends="BaseResultMap">
+		<result column="content" property="content" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Example_Where_Clause">
+		<where>
+			<foreach collection="oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" suffix=")" prefixOverrides="and">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Update_By_Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" suffix=")" prefixOverrides="and">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Base_Column_List">
+		cid, caid, contentName, contentTitle, createTime, updateTime
+	</sql>
+	<sql id="Blob_Column_List">
+		content
+	</sql>
+	<select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.honpe.po.ContentExample">
+		select
+		<if test="distinct">
+			distinct
+		</if>
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from content
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+		<if test="orderByClause != null">
+			order by ${orderByClause}
+		</if>
+	</select>
+	<select id="selectByExample" resultMap="BaseResultMap" parameterType="com.honpe.po.ContentExample">
+		select
+		<if test="distinct">
+			distinct
+		</if>
+		<include refid="Base_Column_List" />
+		from content
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+		<if test="orderByClause != null">
+			order by ${orderByClause}
+		</if>
+	</select>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from content
+		where cid = #{cid,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from content
+		where cid = #{cid,jdbcType=INTEGER}
+	</delete>
+	<delete id="deleteByExample" parameterType="com.honpe.po.ContentExample">
+		delete from content
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</delete>
+	<insert id="insert" parameterType="com.honpe.po.Content">
+		insert into content (cid, caid, contentName,
+		contentTitle, createTime, updateTime,
+		content)
+		values (#{cid,jdbcType=INTEGER}, #{caid,jdbcType=INTEGER}, #{contentname,jdbcType=VARCHAR},
+		#{contenttitle,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE}, #{updatetime,jdbcType=DATE},
+		#{content,jdbcType=LONGVARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.honpe.po.Content">
+		insert into content
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="cid != null">
+				cid,
+			</if>
+			<if test="caid != null">
+				caid,
+			</if>
+			<if test="contentname != null">
+				contentName,
+			</if>
+			<if test="contenttitle != null">
+				contentTitle,
+			</if>
+			<if test="createtime != null">
+				createTime,
+			</if>
+			<if test="updatetime != null">
+				updateTime,
+			</if>
+			<if test="content != null">
+				content,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="cid != null">
+				#{cid,jdbcType=INTEGER},
+			</if>
+			<if test="caid != null">
+				#{caid,jdbcType=INTEGER},
+			</if>
+			<if test="contentname != null">
+				#{contentname,jdbcType=VARCHAR},
+			</if>
+			<if test="contenttitle != null">
+				#{contenttitle,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=DATE},
+			</if>
+			<if test="updatetime != null">
+				#{updatetime,jdbcType=DATE},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<select id="countByExample" parameterType="com.honpe.po.ContentExample" resultType="java.lang.Integer">
+		select count(*) from content
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</select>
+	<update id="updateByExampleSelective" parameterType="map">
+		update content
+		<set>
+			<if test="record.cid != null">
+				cid = #{record.cid,jdbcType=INTEGER},
+			</if>
+			<if test="record.caid != null">
+				caid = #{record.caid,jdbcType=INTEGER},
+			</if>
+			<if test="record.contentname != null">
+				contentName = #{record.contentname,jdbcType=VARCHAR},
+			</if>
+			<if test="record.contenttitle != null">
+				contentTitle = #{record.contenttitle,jdbcType=VARCHAR},
+			</if>
+			<if test="record.createtime != null">
+				createTime = #{record.createtime,jdbcType=DATE},
+			</if>
+			<if test="record.updatetime != null">
+				updateTime = #{record.updatetime,jdbcType=DATE},
+			</if>
+			<if test="record.content != null">
+				content = #{record.content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByExampleWithBLOBs" parameterType="map">
+		update content
+		set cid = #{record.cid,jdbcType=INTEGER},
+		caid = #{record.caid,jdbcType=INTEGER},
+		contentName = #{record.contentname,jdbcType=VARCHAR},
+		contentTitle = #{record.contenttitle,jdbcType=VARCHAR},
+		createTime = #{record.createtime,jdbcType=DATE},
+		updateTime = #{record.updatetime,jdbcType=DATE},
+		content = #{record.content,jdbcType=LONGVARCHAR}
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByExample" parameterType="map">
+		update content
+		set cid = #{record.cid,jdbcType=INTEGER},
+		caid = #{record.caid,jdbcType=INTEGER},
+		contentName = #{record.contentname,jdbcType=VARCHAR},
+		contentTitle = #{record.contenttitle,jdbcType=VARCHAR},
+		createTime = #{record.createtime,jdbcType=DATE},
+		updateTime = #{record.updatetime,jdbcType=DATE}
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByPrimaryKeySelective" parameterType="com.honpe.po.Content">
+		update content
+		<set>
+			<if test="caid != null">
+				caid = #{caid,jdbcType=INTEGER},
+			</if>
+			<if test="contentname != null">
+				contentName = #{contentname,jdbcType=VARCHAR},
+			</if>
+			<if test="contenttitle != null">
+				contentTitle = #{contenttitle,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				createTime = #{createtime,jdbcType=DATE},
+			</if>
+			<if test="updatetime != null">
+				updateTime = #{updatetime,jdbcType=DATE},
+			</if>
+			<if test="content != null">
+				content = #{content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where cid = #{cid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs" parameterType="com.honpe.po.Content">
+		update content
+		set caid = #{caid,jdbcType=INTEGER},
+		contentName = #{contentname,jdbcType=VARCHAR},
+		contentTitle = #{contenttitle,jdbcType=VARCHAR},
+		createTime = #{createtime,jdbcType=DATE},
+		updateTime = #{updatetime,jdbcType=DATE},
+		content = #{content,jdbcType=LONGVARCHAR}
+		where cid = #{cid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.honpe.po.Content">
+		update content
+		set caid = #{caid,jdbcType=INTEGER},
+		contentName = #{contentname,jdbcType=VARCHAR},
+		contentTitle = #{contenttitle,jdbcType=VARCHAR},
+		createTime = #{createtime,jdbcType=DATE},
+		updateTime = #{updatetime,jdbcType=DATE}
+		where cid = #{cid,jdbcType=INTEGER}
+	</update>
+	<select id="selectContents" resultType="com.honpe.ext.ContentExt">
+		SELECT
+		content.cid,
+		content.contentName,
+		content.contentTitle,
+		content.content,
+		content.createTime,
+		content.updateTime,
+		content.caid,
+		content_category.categoryName
+		FROM
+		content
+		LEFT JOIN
+		content_category ON content.caid = content_category.caid ORDER BY cid
+	</select>
+</mapper>

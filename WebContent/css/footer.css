@@ -1,0 +1,35 @@
+footer {
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background: #f1f1f1;
+}
+
+footer p {
+	line-height: 20px;
+	font-size: 18px;
+	color: #999999;
+	text-align: center;
+}
+
+.icon {
+	margin: 0 5px;
+	vertical-align: top;
+}
+
+.firstp a {
+	text-decoration: none !important;
+	color: #999999;
+}
+
+.firstp a:hover {
+	color: #cdcdcd;
+	cursor: pointer;
+}
+
+.offerform p {
+	font-size: 16px;
+	text-align: right;
+	padding: 20px;
+	color: #ff4e00;
+	font-weight: bold;
+}

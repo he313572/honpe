@@ -1,0 +1,37 @@
+/*内容样式*/
+
+.title {
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.contentlist {
+	margin-top: 25px;
+	overflow: hidden;
+}
+
+.contentlist dt {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.contentlist dd {
+	font-size: 16px;
+	color: #292929;
+	text-indent: 30px;
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+.contentfooter {
+	margin-top: 20px;
+	float: right;
+	font-size: 14px;
+	color: #292929;
+	padding: 10px 0;
+	border-top: 1px solid #292929;
+}

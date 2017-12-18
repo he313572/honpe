@@ -1,0 +1,140 @@
+section {
+	padding-bottom: 55px;
+	border-bottom: 2px solid #11aeff;
+	background: #fff;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+span.error {
+	color: #C00;
+	padding: 0 6px;
+}
+
+.sectioninner {
+	border: 1px solid #1db2ff;
+	border-radius: 5px;
+	padding-bottom: 22px;
+}
+
+.registerform {
+	margin-top: 55px;
+}
+
+.stars {
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.formli {
+	margin-top: 10px;
+}
+
+.registerform label {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: initial;
+	color: #292929;
+	width: 145px;
+	text-align: right;
+}
+
+.registerform input[type="text"], .registerform input[type="password"], .registerform input[type="email"]
+	{
+	padding: 0 5px;
+	border: 1px solid #d2d2d2;
+	background: #faffbd;
+	width: 300px;
+	height: 40px;
+	font-size: 18px;
+	color: #757575;
+}
+
+.filetitle {
+	display: inline-block;
+	text-align: left;
+}
+
+.uploadbox {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #d2d2d2;
+}
+
+.uploadbox input[type=file] {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 90px;
+	outline: none;
+	color: #484848;
+}
+
+.prompt {
+	padding: 5px 0 5px 150px;
+	color: #ff4e00;
+	font-size: 14px;
+}
+
+.codeimg {
+	display: inline-block;
+	border: 1px solid #d2d2d2;
+}
+
+.codeimg img {
+	vertical-align: top;
+}
+
+.codetitle {
+	width: 165px !important;
+	margin-left: -20px;
+}
+
+.codeimg input[type=text] {
+	border: none;
+	width: 213px
+}
+
+.formsubmit {
+	padding-left: 84px;
+	margin-top: 34px;
+}
+
+.formsubmit input[type=submit] {
+	width: 155px;
+	height: 45px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	margin: 0 20px;
+}
+
+.formsubmit input[type=button] {
+	width: 145px;
+	height: 45px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	margin: 0 20px;
+}
+
+.onactive {
+	background: #ff1e00;
+	color: #fff;
+}
+
+.remind {
+	color: #ff4e00;
+	font-size: 14px;
+	padding-left: 145px;
+}

@@ -1,0 +1,172 @@
+section {
+	background: #fff;
+	border-bottom: 2px solid #11aeff;
+	padding-bottom: 20px;
+}
+
+.sectioninner {
+	border: 1px solid #11aeff;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	min-height: 686px;
+}
+
+.title {
+	background: linear-gradient(#11aeff, #10a0ec, #0f94d9);
+	font-size: 18px;
+	color: #ebf5fd;
+	padding: 10px 12px;
+}
+
+.functionbox {
+	padding: 18px 16px;
+	margin: 0;
+}
+
+.funtionboxinner {
+	border: 1px solid #bfbfbf;
+}
+
+.functionbut {
+	background: #eaebeb;
+	padding: 4px 16px 4px 26px;
+}
+
+.deletespan {
+	margin-left: 30px;
+}
+
+.functionbut div:first-of-type a {
+	margin-right: 10px;
+}
+
+.functionbut a {
+	font-size: 18px;
+	color: #444;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+	line-height: 180%;
+	padding: 0 5px;
+	cursor: pointer;
+	transition: 0.5s all;
+}
+
+.functionbut a:hover {
+	border-radius: 5px;
+	background: rgba(17, 174, 255, 0.5);
+}
+
+.functionbut a img {
+	margin-right: 8px;
+}
+
+.functionbut div:first-of-type img {
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.searchinput {
+	float: right;
+	border: 1px solid #00a0e9;
+	overflow: hidden;
+}
+
+.searchinput input[type=search] {
+	border: none;
+	padding: 3px 7px;
+	outline: none;
+	margin: 0;
+	font-size: 16px;
+	background: #eaebeb;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.searchinput img {
+	cursor: pointer;
+}
+
+.submit {
+	margin-right: -1px;
+}
+
+.table {
+	margin-bottom: 5px;
+}
+
+.persontable tbody td {
+	border-top: 1px dashed #c0c0c0 !important;
+}
+
+.persontable th, td {
+	font-size: 18px;
+	color: #3f3f3f;
+	text-align: center;
+}
+
+.persontable tr>td:first-of-type {
+	text-align: left
+}
+
+.persontable tr>th:first-of-type {
+	text-align: left
+}
+
+.persontable th {
+	color: #000;
+}
+
+.persontable td a {
+	margin: 0 10px;
+}
+
+.persontable td img {
+	transition: 0.5s all;
+}
+
+.persontable td img:hover {
+	transform: scale(1.2);
+}
+
+.persontable input[type=checkbox] {
+	margin-right: 14px;
+}
+
+/*******分页按钮部分*********/
+.ppager {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.ppager a {
+	text-decoration: none;
+	margin: 0 2px;
+	display: inline-block;
+	height: 28px;
+	padding: 0 8px;
+	background: #eaeaea;
+	color: #1f1f1f;
+	font-size: 16px;
+	border-radius: 5px;
+	line-height: 28px;
+	border: 1px solid #bdbdbd;
+}
+
+.current {
+	color: #fff !important;
+	background: #1cb1fe !important;
+	border: none !important;
+}
+
+.warninginfo {
+	color: red;
+	text-align: center;
+}
+
+.nodata {
+	font-size: 25px;
+	color: #11acfb;
+	text-align: center;
+}

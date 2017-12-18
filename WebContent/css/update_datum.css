@@ -1,0 +1,112 @@
+section {
+	background: #fff;
+	padding-bottom: 20px;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+span.error {
+	color: #C00;
+	padding: 0 6px;
+}
+
+.sectioninner {
+	border: 1px solid #11aeff;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.title {
+	background: linear-gradient(#11aeff, #10a0ec, #0f94d9);
+	color: #fff;
+	font-size: 18px;
+	padding: 8px 16px;
+}
+
+.forminner {
+	padding: 17px 0 132px 0;
+}
+
+.formli {
+	font-size: 18px;
+	color: #292929;
+	margin-top: 17px;
+}
+
+.formli label {
+	width: 130px;
+	text-align: right;
+	font-weight: inherit;
+	margin-right: 20px;
+}
+
+.formli input {
+	width: 300px;
+	height: 42px;
+	padding: 0 10px;
+	font-size: 18px;
+	background: #faffbd;
+	border: none;
+	border: 1px solid #d2d2d2;
+}
+
+.uploadbox {
+	margin-top: 40px;
+	text-align: center;
+	padding: 0 60px;
+}
+
+.uploadbox p {
+	font-size: 18px;
+	color: #292929;
+	font-weight: bold;
+}
+
+.uploadbox img {
+	width: 195px;
+	height: 135px;
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	margin-top: 18px;
+	display: block;
+}
+
+.filebut {
+	opacity: 0;
+	width: 180px;
+	height: 120px;
+	position: absolute;
+	left: 20;
+	top: 60px;
+}
+
+.warning {
+	padding-left: 74px;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #ff4e00;
+}
+
+.formbut {
+	margin-top: 50px;
+	padding-left: 10%;
+}
+
+.formbut input {
+	font-size: 18px;
+	outline: none;
+	padding: 8px 45px;
+	border: 1px solid #bababa;
+	border-radius: 3px;
+	margin: 0 27px;
+}
+.onactive {
+	background: #ff1e00;
+	color: #fff;
+}

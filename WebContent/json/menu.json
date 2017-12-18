@@ -1,0 +1,11 @@
+[
+	 {
+		"id": 1,
+		"text": "采购QQ管理",
+		"page": "/qq/list"
+	}, {
+		"id": 2,
+		"text": "内容管理",
+		"page": "/content/list"
+	}
+]

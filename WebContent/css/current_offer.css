@@ -1,0 +1,80 @@
+* {
+	font-family: "微软雅黑"
+}
+
+.offerlist {
+	padding: 0;
+	margin-top: 12px;
+}
+
+.submit {
+	margin-right: -1px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.offerlist caption {
+	font-size: 18px;
+	color: #fff;
+	background: #41bae2;
+	padding: 10px 12px;
+}
+
+.table td, th {
+	font-size: 16px;
+	text-align: center;
+	font-weight: inherit;
+}
+
+.table th {
+	color: rgba(0, 0, 0, 0.9);
+	font-weight: bold;
+}
+
+.table thead>tr {
+	background: #ebebeb;
+}
+
+.table tbody>tr>td {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th,
+	.table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th,
+	.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+	border-color: #11aeff;
+}
+
+/*******分页按钮部分*********/
+.ppager {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.ppager a {
+	text-decoration: none;
+	margin: 0 2px;
+	display: inline-block;
+	height: 28px;
+	padding: 0 8px;
+	background: #eaeaea;
+	color: #1f1f1f;
+	font-size: 16px;
+	border-radius: 5px;
+	line-height: 28px;
+	border: 1px solid #bdbdbd;
+}
+
+.current {
+	color: #fff !important;
+	background: #1cb1fe !important;
+	border: none !important;
+}
+
+.nodata {
+	font-size: 25px;
+	color: #11acfb;
+	text-align: center;
+}

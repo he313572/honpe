@@ -1,0 +1,114 @@
+body {
+	background: #fff;
+}
+
+section {
+	background: #fff;
+	padding-bottom: 18px;
+}
+
+.sectioninner {
+	border-radius: 5px;
+}
+
+.space1 {
+	display: inline-block;
+	width: 18px
+}
+
+.naticenav li:hover {
+	color: #00a9b8;
+}
+
+.naticenav li:hover span {
+	opacity: 1;
+}
+
+.naticenav li:hover {
+	background: #fff;
+}
+
+li {
+	list-style: none;
+	list-style-position: inside;
+}
+
+.naticenav {
+	width: 25%;
+	float: left;
+	padding: 0 !important;
+	border: 1px solid #009beb;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+
+.naticenav p {
+	text-align: center;
+	font-size: 18px;
+	padding: 10px 0;
+	color: #fff;
+	background: #11aeff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	margin: 0 0 2px !important;
+}
+
+.naticenav ul {
+	padding-left: 0 !important;
+	overflow: hidden;
+	margin-bottom: 0 !important;
+}
+
+.naticenav li {
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px dashed #d4d4d4;
+	color: #292929;
+	font-size: 16px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.naticenav span {
+	display: inline-block;
+	width: 7px;
+	height: 100%;
+	background: #46bce3;
+	opacity: 0;
+}
+
+.naticenav font {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.curul li {
+	background: #fff;
+}
+
+.curul span {
+	opacity: 1;
+}
+
+.content {
+	float: right;
+	width: 74%;
+	border: 1px solid #11aeff;
+	margin-left: 7px;
+	border-radius: 8px;
+	padding: 44px 45px 115px 48px;
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+	.content {
+		width: 100%;
+	}
+}

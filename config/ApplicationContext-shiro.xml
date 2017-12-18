@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	<!-- shiro权限控制框架 -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager"></property>
+		<property name="loginUrl" value="/login" />
+		<property name="successUrl" value="/demand/list" />
+		<property name="unauthorizedUrl" value="/login" />
+		<property name="filterChainDefinitions">
+			<value>
+				/css/** = anon
+				/img/** = anon
+				/images/** = anon
+				/js/** = anon
+				/json/** = anon
+				/error/** = anon
+				/tuser/** = anon
+				/update_pwd = authc
+				/demand/** = authc
+				/offer/** = authc
+				/staff/** = authc
+				/product/** = authc
+				/offer/sup_myoffer = perms[supplier]
+				/supplier/** = perms[supplier]
+				/staff/** = perms[supplier]
+				/offer/sal_myoffer = perms[salesman]
+				/content/list = perms[admin]
+				/qq/** = perms[admin]
+				/admin/** = perms[admin]
+			</value>
+		</property>
+	</bean>
+	<bean id="honpeRealm" class="com.honpe.shiro.HonpeRealm"></bean>
+	<!-- shiro安全管理器 -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="honpeRealm" />
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	<!-- 缓存管理器 -->
+	<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<property name="cacheManagerConfigFile" value="classpath:ehcache.xml" />
+	</bean>
+	<!-- 开启代理 -->
+	<bean id="defaultAdvisorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+	<!-- 切面类 -->
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor" />
+</beans>

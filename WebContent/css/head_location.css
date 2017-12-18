@@ -1,0 +1,234 @@
+* {
+	font-family: "微软雅黑";
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	text-decoration: none
+}
+
+body {
+	background: #f1f1f1;
+}
+
+.headconteriner {
+	padding-top: 5px;
+}
+
+.head {
+	border-bottom: 2px solid #11aeff;
+	background: linear-gradient(#f6f6f6, #f3f3f3, #ececec, #e9e9e9);
+	margin: 0;
+	padding: 0;
+}
+
+.headleft {
+	margin-top: 10px;
+	padding-left: 0;
+}
+
+.headright {
+	padding-right: 0;
+}
+
+.headlogo {
+	margin-top: -10px;
+}
+
+.vertical {
+	display: inline-block;
+	height: 25px;
+	width: 2px;
+	background: #646262;
+	vertical-align: text-bottom;
+	box-shadow: 1px 1px 1px #646262;
+	margin: 0 5px;
+}
+
+.headtitle {
+	margin-left: 25px;
+	font-size: 28px;
+	color: #646262;
+}
+
+.righttitle {
+	margin-top: -5px;
+	font-size: 16px;
+	color: #999999;
+	text-align: right;
+}
+
+.space {
+	display: inline-block;
+	width: 10px;
+}
+
+.navcontainer {
+	float: right;
+	width: 400px;
+	background: url(../img/rinav.png) no-repeat;
+	background-position: right;
+	background-size: 100% 100%;
+	border-top-right-radius: 5px;
+	text-align: right;
+	border-top: 1px solid rgba(0, 0, 0, 0);
+	border-left: 1px solid rgba(0, 0, 0, 0);
+}
+
+.navcontainer a:last-of-type {
+	margin-right: 30px;
+}
+
+.navcontainer a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 10px 2px 10px;
+	color: #ffffff;
+}
+
+.navcontainer a:hover {
+	color: #D2D2D2;
+}
+
+.locationbox {
+	background: #fff;
+}
+
+.locationdiv {
+	padding: 0
+}
+
+.location {
+	font-size: 18px;
+	color: #3f3f3f;
+	line-height: 35px;
+	padding: 5px 0;
+	margin: 0;
+}
+
+.location span {
+	float: right;
+}
+
+.location span a {
+	margin: 0 10px;
+	padding: 4px 10px !important;
+}
+/********用户管理导航栏***********/
+.headtop {
+	float: right;
+	padding: 10px 0;
+}
+
+.headtop span {
+	margin-left: 10px;
+}
+
+.headtop a:last-of-type {
+	color: #000;
+}
+
+.headtop a:hover {
+	color: rgb(0, 129, 194);
+}
+
+.headtop i {
+	display: inline-block;
+	width: 10px;
+}
+
+.navtitle {
+	margin-top: 10px;
+	margin-left: 20px;
+	font-size: 14px;
+	float: right;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	z-index: 70;
+}
+
+.navtitle img {
+	height: 18px;
+	vertical-align: sub;
+	margin-left: 5px;
+}
+
+.usernav {
+	position: absolute;
+	width: 170px;
+	top: 18px;
+	right: -76px;
+	display: none;
+	background: url(../img/nvabg.png);
+	background-size: 100% 100%;
+}
+
+.navtitle:hover .usernav {
+	display: block;
+}
+
+.navtitle:hover .navhover {
+	color: rgb(0, 129, 194);
+}
+
+.usernav ul {
+	padding-left: 0;
+	margin: 0;
+	padding: 14px 1px 4px 1px;
+}
+
+.usernav li {
+	list-style-type: none;
+	font-size: 16px;
+	text-align: left;
+	width: 100%;
+	padding: 10px 50px;
+	border-bottom: 1px dashed #DCDCDC;
+	cursor: pointer;
+}
+
+.usernav li:last-of-type {
+	border: none;
+}
+
+.usernav li a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.usernav li:hover {
+	background: #f3f3f3;
+}
+
+.curpage {
+	background: #f3f3f3;
+}
+
+.dayu {
+	vertical-align: middle;
+	margin: 0 15px;
+	margin-top: -2px;
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+	.headtitle {
+		font-size: 20px;
+	}
+	.navcontainer {
+		width: 300px;
+	}
+	.navcontainer a {
+		font-size: 14px;
+	}
+	.navcontainer a:last-of-type {
+		margin-right: 10px;
+	}
+}

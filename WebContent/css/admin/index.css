@@ -1,0 +1,96 @@
+.northcontainer {
+	height: 150px;
+	overflow: hidden;
+}
+
+.systemtitle {
+	position: absolute;
+	left: 60px;
+	top: 50px;
+	font-family: "楷体";
+	font-size: 50px;
+	color: #007DDB;
+	font-weight: bold;
+	z-index: 9999;
+	text-shadow: 3px 3px 3px #0092DC;
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor: default;
+}
+
+.showuser {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+}
+
+.control {
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+	z-index: 8888;
+}
+
+.control a {
+	font-weight: bolder;
+}
+
+#layout_north_kzmbMenu {
+	width: 100px;
+	display: none;
+}
+
+.eastcontainer {
+	width: 230px;
+	padding: 20px 10px;
+	background: #fafafa;
+}
+
+.searchsubmit {
+	margin-left: 40px;
+}
+
+.westcontainer {
+	width: 180px;
+	padding: 5px
+}
+
+.centercontainer {
+	background: #eee;
+}
+
+.centercontainer div {
+	width: 100%;
+	overflow: hidden;
+}
+
+.southcontainer {
+	height: 30px;
+	padding-top: 10px;
+}
+
+.timeshow {
+	font-size: 12px;
+	margin-left: 20px;
+	width: 30%;
+	float: left;
+}
+
+.timeshow i {
+	color: #95B8E7;
+	margin-right: 5px;
+}
+
+.editpwdcenter {
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.editpwdsouth {
+	text-align: right;
+	height: 30px;
+	line-height: 30px;
+}

@@ -1,0 +1,104 @@
+section {
+	background: #fff;
+	border-bottom: 2px solid #11aeff;
+	padding-bottom: 52px;
+}
+
+span.error {
+	color: #C00;
+	padding: 0 6px;
+	font-size: 14px;
+}
+
+.sectioninner {
+	border: 1px solid #11aeff;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-bottom: 20px;
+	height: 635px;
+}
+
+.title {
+	background: linear-gradient(#11aeff, #10a0ec, #0f94d9);
+	color: #fff;
+	font-size: 18px;
+	padding: 8px 16px;
+}
+
+.basebox {
+	padding: 0;
+}
+
+.basetitle {
+	margin-top: 26px;
+	font-size: 18px;
+	color: #000;
+	padding-left: 32px;
+	padding-right: 0;
+	font-weight: 600;
+}
+
+.basetitle span {
+	display: inline-block;
+	height: 2px;
+	width: 93%;
+	margin-left: 5px;
+	border: 1px dashed #bfbfbf;
+	vertical-align: middle;
+}
+
+.baseinfo {
+	font-size: 18px;
+	color: #000;
+	font-weight: inherit;
+}
+
+.baseinfo label {
+	display: inline-block;
+	width: 90px;
+	font-weight: initial;
+	text-align: right;
+}
+
+.baseinfo p {
+	margin-top: 24px;
+	color: #000;
+}
+
+.label1 {
+	color: #292929;
+}
+
+.basetitle2 {
+	margin-top: 0;
+}
+
+.baseinfo input {
+	padding: 0 10px;
+	height: 40px;
+	font-size: 18px;
+	color: #000000;
+	border: 1px solid #d2d2d2;
+	width: 300px
+}
+
+.baseinfo input[type=button], input[type=submit] {
+	font-size: 18px;
+	width: 125px;
+	height: 40px;
+	margin: 0 27px;
+	margin-top: 45px;
+	border-radius: 5px;
+	border: 1px solid #b5b5b5;
+	outline: none;
+}
+
+.baseinfo input[type=submit] {
+	border: none
+}
+
+.onactive {
+	background: #ff1e00;
+	color: #fff!important;
+}

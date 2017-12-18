@@ -1,0 +1,246 @@
+body {
+	background: #fff;
+}
+
+section {
+	background: #fff;
+}
+
+.sectioninner {
+	background: #fff;
+	border-bottom: 1px dashed #b7e7ff;
+}
+
+.groupnav {
+	background: linear-gradient(#11aeff, #0f9ce5, #0f94d9);
+	padding: 5px 15px;
+	text-align: right;
+	height: 35px;
+}
+
+.groupnav a {
+	font-size: 18px;
+	color: #f5fafe;
+	text-decoration: none;
+}
+
+.bread {
+	display: inline-block;
+	width: 3px;
+	background: linear-gradient(to right, #1b1b1b, #d6effd);
+	height: 18px;
+	vertical-align: sub;
+}
+
+.demandinfo {
+	border-top: 1px dashed #2fb8ff;
+	border-bottom: 1px dashed #2fb8ff;
+	margin-top: 10px;
+	padding: 12px 30px;
+	background: #fbfcff;
+}
+
+.demandinfo p, .demandinfo figure {
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.demandinfo p {
+	line-height: 44px;
+}
+
+.demandinfo p  a {
+	margin-right: 10px;
+}
+
+.destitle {
+	float: left;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.desinfo {
+	float: left;
+	width: 90%;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.space4 {
+	display: inline-block;
+	width: 30px;
+}
+
+.description font: {
+	display: inline-block
+}
+
+.description span:nth-last-of-type {
+	display: inline-block;
+}
+
+.demandpicture {
+	margin: 24px 0;
+}
+
+.space3 {
+	display: inline-block;
+	width: 18px;
+}
+
+.offertable {
+	width: 100%;
+	border: 1px solid #eeeeee;
+}
+
+.offertable thead>tr {
+	border-bottom: 2px solid #eeeeee;
+}
+
+.offertable caption {
+	border: 1px solid #e5e5e5;
+	font-size: 16px;
+	padding-left: 10px;
+	background: linear-gradient(#fcfcfc, #f1f1f1, #eaeaea);
+}
+
+.offertable td, th {
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid #cdcdcd;
+	padding: 5px 0 !important;
+	vertical-align: middle !important;
+}
+
+.offertable td {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.pricetd input[type=text] {
+	border: none;
+	outline: none;
+	width: 60px;
+	padding: 5px 0;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.date {
+	border: none;
+	outline: none;
+	width: 92px !important;
+	text-align: center;
+	padding: 5px 0;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.pictd img {
+	width: 60px;
+	height: auto;
+}
+
+.offercontainer {
+	margin-top: 5px;
+}
+
+.offerform {
+	padding-top: 55px;
+	padding-bottom: 50px;
+}
+
+.offerform p {
+	color: #ff4e00;
+}
+
+.offertable caption button {
+	float: right;
+	display: inline-block;
+	color: #fff;
+	padding: 3px 5px;
+	font-size: 14px;
+	background: linear-gradient(#3ab8f8, #179adf);
+	vertical-align: bottom;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	transition: 0.5s all;
+}
+
+.offertable caption button:hover {
+	transform: scale(1.1)
+}
+/*==========弹窗==========*/
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	width: 0;
+	height: 0;
+	z-index: 80;
+	overflow: hidden;
+}
+
+#close {
+	display: block;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	right: -20px;
+	top: -20px;
+	background: #000;
+	border: 1px solid #000;
+	border-radius: 50%;
+	z-index: 99999;
+	overflow: hidden;
+	color: #fff;
+	font-size: 25px;
+	cursor: default;
+	font-family: "楷体";
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+.popup>div {
+	margin-top: 5%;
+	z-index: 999;
+	background: #fff;
+	border: 2px solid #3ab8f8;
+	border-radius: 10px;
+	box-shadow: 0 0 2 #3ab8f8;
+	padding: 10px;
+	height: 80%;
+	overflow: auto;
+}
+
+.popup caption {
+	border: 1px solid #e5e5e5;
+	font-size: 16px;
+	background: linear-gradient(#fcfcfc, #f1f1f1, #eaeaea);
+	padding: 5px 10px;
+}
+
+.popup caption font {
+	line-height: 170%;
+}
+
+.rebut {
+	float: right;
+}
+
+.popup caption input {
+	cursor: pointer;
+	outline: none;
+	width: 30px;
+	float: right;
+}
+
+.popup table th, .popup table td {
+	vertical-align: middle !important;
+	text-align: center;
+}

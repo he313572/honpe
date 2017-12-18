@@ -1,0 +1,11 @@
+/ApplicationContext-dao.xml
+/ApplicationContext-service.xml
+/ApplicationContext-shiro.xml
+/ApplicationContext-tran.xml
+/com/
+/ehcache.xml
+/jdbc.properties
+/log4j.properties
+/resource.properties
+/springmvc.xml
+/sqlMapConfig.xml

@@ -1,0 +1,38 @@
+#demandId {
+	width: 212px;
+	border: 1px solid #e5e5e5;
+}
+
+.demandinfo {
+	margin-top: 0;
+}
+
+.currentoffer {
+	border-bottom: 1px dashed #39bbff;
+}
+
+.offerinfo {
+	padding: 22px 0;
+}
+
+.offerinfo p {
+	padding: 0 35px;
+	font-size: 18px;
+	color: #585858;
+}
+
+.offerinfo p:first-of-type {
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 20px;
+	padding: 0;
+}
+
+.offerinfo p span {
+	color: rgba(0, 0, 0, 0.8);
+	display: inline-block;
+	width: 50%;
+}
+
+.offerinfo p font {
+	color: rgba(0, 0, 0, 0.6);
+}
